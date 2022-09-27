@@ -5,13 +5,16 @@ Sistema modulado de cadastro de membros, finanças e votações voltado para a I
 Módulos já desenvolvidos:
 
 -REST API
+
 -Cadastro de Membros
 
 Tecnologias envolvidas:
 
 - Java 11
-- Spring Boot
-- Thymeleaf como template engine
+- MariaDB 10.9.3
+- Spring Boot Framework
+- Thymeleaf
+- Autenticação jdbc com Spring Security
 
 Frontend:
 
@@ -21,4 +24,6 @@ Frontend:
 
 
 
-Sistema desenvolvido por Arthur Nunes Catarina (Backend) e Kariston Stefane (Front-End)
+Sistema desenvolvido por:
+@xarthurnunes - Arthur Nunes Catarina (Backend) 
+@kakastefane  - Kariston Stefane (Front-End)
