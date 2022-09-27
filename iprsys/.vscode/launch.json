@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-IprsysApplication<iprsys>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "mainClass": "br.com.iprsaojose.iprsys.IprsysApplication",
+            "projectName": "iprsys",
+            "args": ""
+        }
+    ]
+}

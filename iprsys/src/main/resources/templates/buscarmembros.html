@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/bootstrap.min.css" />
+    <title>IPR Sys</title>
+</head>
+
+<body class="bg-dark text-white">
+    <header>
+        <nav class="navbar navbar-light bg light">
+            <a href="/sistema/home"><span class="navbar-brand mb-o h1 text-white" style="font-weight: bold;">IPR Sys</span></a>
+            <a class="btn btn-primary" href="/sistema/cadastrarmembros">Cadastrar Membros</a>
+        </nav>   
+       </header>
+       <nav aria-label="breadcrumb">
+           <ol class="breadcrumb bg-dark text-white" padding-left="0px;">
+               <li class="breadcrumb-item active" aria-current="page">Inicio / Busca de membros</li>
+           </ol>
+       </nav>
+    <div class="container">
+        <h1>Busca de Membros</h1>
+        <form action="/buscarmembros" method="POST">
+            <div class="form-group row">
+                <label class="col-sm-2 col-form-label" for="nomeMembro">Nome do Membro</label>
+                <div class="col-sm-5">
+                    <input id="nomeMembro" name="nomeMembro" type="text" placeholder="Ex: João da Silva" class="form-control">
+                </div>
+                <button type="submit" class="btn btn-primary">Buscar</button>
+            </div>
+            
+        </form>
+
+        <div th:if="${lista.size() > 0}">
+            <h2>Lista de Membros Cadastrados</h2>
+            <div class="row m-1" th:each="membro : ${lista}">
+                <div class="col-3">
+                    <a th:href="@{/sistema/buscarmembros/{id}(id=${membro.id})}" th:text="${membro.nomeMembro}"></a>
+                </div>
+                <div class="col-3">
+                    <a class="btn btn-success btn-sm" th:href="@{/sistema/mostrarmembros/{id}(id=${membro.id})}">Detalhes</a>
+                </div>
+                <div class="col-3">
+                    <a class="btn btn-warning btn-sm" th:href="@{/sistema/editarmembro/{id}(id=${membro.id})}">Editar</a>
+                </div>
+                <div class="col-3">
+                    <a class="btn btn-danger btn-sm" th:href="@{/sistema/deletarmembro/{id}(id=${membro.id})}">Deletar</a>
+                </div>
+            </div>
+        </div>
+
+        
+    </div>
+
+
+
+
+    <script src="/js/jquery-3.5.1.slim.min.js"></script>
+    <script src="/js/popper.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+</body>
+
+</html>

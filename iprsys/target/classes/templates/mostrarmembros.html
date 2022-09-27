@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/bootstrap.min.css" />
+    <title>IPR Sys</title>
+</head>
+
+<body class="bg-dark text-white">
+    <header>
+        <nav class="navbar navbar-light bg light">
+            <a href="/sistema/home"><span class="navbar-brand mb-o h1 text-white" style="font-weight: bold;">IPR Sys</span></a>
+            <a class="btn btn-primary" href="/sistema/cadastrarmembros">Cadastrar Membros</a>
+            <a class="btn btn-primary" href="/sistema/buscarmembros">Buscar Membros</a>
+        </nav>   
+       </header>
+       <nav aria-label="breadcrumb">
+           <ol class="breadcrumb bg-dark text-white" padding-left="0px;">
+               <li class="breadcrumb-item active" aria-current="page">Inicio / Mostrar Membros</li>
+           </ol>
+       </nav>
+    <div class="container">
+        <h1>IPR Sys</h1>
+        <h2 th:text="${'Código membro: ' + membro.id}"></h2>
+        <h2 th:text="${'Nome: ' + membro.nomeMembro}"></h2>
+        <h2 th:text="${'E-mail: ' + membro.emailMembro}"></h2>
+        <h2 th:text="${'Telefone: ' + membro.telefoneMembro}"></h2>
+        <a class="btn btn-primary" href="/sistema/buscarmembros">Voltar</a>
+    </div>
+    <script src="/js/jquery-3.5.1.slim.min.js"></script>
+    <script src="/js/popper.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+</body>
+
+</html>
