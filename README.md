@@ -25,5 +25,7 @@ Frontend:
 
 
 Sistema desenvolvido por:
+
 @xarthurnunes - Arthur Nunes Catarina (Backend) 
+
 @kakastefane  - Kariston Stefane (Front-End)
